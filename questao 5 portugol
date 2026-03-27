@@ -1,0 +1,31 @@
+Algoritmo "SaldoConta"
+
+Var
+   numeroConta: inteiro
+   saldo, debito, credito, saldoAtual: real
+
+Inicio
+
+   Escreva("Digite o número da conta: ")
+   Leia(numeroConta)
+
+   Escreva("Digite o saldo: ")
+   Leia(saldo)
+
+   Escreva("Digite o débito: ")
+   Leia(debito)
+
+   Escreva("Digite o crédito: ")
+   Leia(credito)
+
+   saldoAtual <- saldo - debito + credito
+
+   Escreva("Saldo atual: ", saldoAtual)
+
+   Se (saldoAtual >= 0) entao
+      Escreva("Saldo Positivo")
+   Senao
+      Escreva("Saldo Negativo")
+   FimSe
+
+Fimalgoritmo
