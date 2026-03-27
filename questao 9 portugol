@@ -1,0 +1,41 @@
+algoritmo "fruteira"
+
+var
+   kgMorango, kgMaca: real
+   precoMorango, precoMaca: real
+   total, totalKg: real
+
+inicio
+
+   escreva("Digite a quantidade de morangos (Kg): ")
+   leia(kgMorango)
+
+   escreva("Digite a quantidade de maçãs (Kg): ")
+   leia(kgMaca)
+
+   // Cálculo do preço do morango
+   se (kgMorango <= 5) entao
+      precoMorango <- kgMorango * 2.50
+   senao
+      precoMorango <- kgMorango * 2.20
+   fimse
+
+   // Cálculo do preço da maçã
+   se (kgMaca <= 5) entao
+      precoMaca <- kgMaca * 1.80
+   senao
+      precoMaca <- kgMaca * 1.50
+   fimse
+
+   // Soma total
+   total <- precoMorango + precoMaca
+   totalKg <- kgMorango + kgMaca
+
+   // Verifica desconto
+   se (totalKg > 8) ou (total > 25) entao
+      total <- total * 0.90
+   fimse
+
+   escreva("Valor total a pagar: R$ ", total:0:2)
+
+fimalgoritmo
