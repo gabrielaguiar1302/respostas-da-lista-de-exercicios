@@ -1,0 +1,39 @@
+algoritmo "Posto de Combustivel"
+var
+   litros : real
+   tipo   : caracter
+   preco, desconto, valorTotal, valorDesconto, valorPagar : real
+inicio
+   escreva("Digite o numero de litros: ")
+   leia(litros)
+   escreva("Digite o tipo de combustivel (A-alcool, G-gasolina): ")
+   leia(tipo)
+
+   se (tipo = "A") ou (tipo = "a") entao
+      preco <- 2.90
+      se litros <= 20 entao
+         desconto <- 0.03
+      senao
+         desconto <- 0.05
+      fimse
+   senao
+      se (tipo = "G") ou (tipo = "g") entao
+         preco <- 3.30
+         se litros <= 20 entao
+            desconto <- 0.04
+         senao
+            desconto <- 0.06
+         fimse
+      senao
+         escreval("Tipo de combustivel invalido!")
+      fimse
+   fimse
+
+   valorTotal    <- litros * preco
+   valorDesconto <- valorTotal * desconto
+   valorPagar    <- valorTotal - valorDesconto
+
+   escreval("Valor total sem desconto: R$ ", valorTotal:5:2)
+   escreval("Desconto aplicado:        R$ ", valorDesconto:5:2)
+   escreval("Valor a pagar:            R$ ", valorPagar:5:2)
+fimalgoritmo
