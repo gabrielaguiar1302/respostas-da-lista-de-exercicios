@@ -1,0 +1,36 @@
+Algoritmo "salario_com_hora_extra"
+// 
+//  
+// Descrição   : Aqui você descreve o que o programa faz! (função)
+// Autor(a)    : Nome do(a) aluno(a)
+// Data atual  : 26/03/2026
+
+var
+horas_mes: inteiro
+horas_normais: inteiro
+horas_eztras: inteiro
+salario_hora: real
+salario_total: real
+
+
+Inicio
+escreva("Digite o numero de horas trabalhadas no mes: ")
+leia(horas_mes)
+
+escreva("Digite o valor da hora: ")
+leia(salario_hora)
+
+
+// Limite de horas normais no mes
+horas_normais <-160
+
+se (horas_mes > horas_normais) entao
+horas_extras <- horas_mes - horas_normais
+salario_total <- (horas_normais * salario_hora) + (horas_extras * salario_hora 1.5)
+senao
+salario_total <- horas_mes * salario_hora
+fimse
+
+escreva("Salario total: R$ ", salario_total)
+
+Fimalgoritmo
