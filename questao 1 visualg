@@ -1,0 +1,23 @@
+Algoritmo "CompraDeMacas"
+// 
+//  
+// Descrição   : Aqui você descreve o que o programa faz! (função)
+// Autor(a)    : Nome do(a) aluno(a)
+// Data atual  : 26/03/2026
+Var
+   quantidade : inteiro
+   preco, total: real
+
+Inicio
+ escreva("quantas macas você comprou?")
+ leia(quantidade)
+ se quantidade < 12 entao
+    preco <- 1.30
+ senao
+ preco<- 1.00
+ fimse
+ total <- quantidade * preco
+
+ escreva ("Total a pagar: R$ ", total:0:2)
+
+fimalgoritmo
