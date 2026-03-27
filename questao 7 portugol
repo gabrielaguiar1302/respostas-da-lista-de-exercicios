@@ -1,0 +1,37 @@
+Algoritmo "calculo_produto"
+
+Var
+   nome: caractere
+   quantidade, preco_unitario: real
+   total, desconto, total_pagar: real
+
+Inicio
+
+   escreva("Digite o nome do produto: ")
+   leia(nome)
+
+   escreva("Digite a quantidade: ")
+   leia(quantidade)
+
+   escreva("Digite o preço unitário: ")
+   leia(preco_unitario)
+
+   total <- quantidade * preco_unitario
+
+   se (quantidade <= 5) entao
+      desconto <- total * 0.02
+   senao
+      se (quantidade <= 10) entao
+         desconto <- total * 0.03
+      senao
+         desconto <- total * 0.05
+      fimse
+   fimse
+
+   total_pagar <- total - desconto
+
+   escreval("Total: ", total)
+   escreval("Desconto: ", desconto)
+   escreval("Total a pagar: ", total_pagar)
+
+Fimalgoritmo
