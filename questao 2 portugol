@@ -1,0 +1,28 @@
+Algoritmo A"verificar_voto"
+//
+//
+// Descrição   : Aqui você descreve o que o programa faz! (função)
+// Autor(a)    : Nome do(a) aluno(a)
+// Data atual  : 26/03/2026
+Var
+anoAtual, anoNascimento, idade: inteiro
+
+
+
+Inicio
+escreva("digite o ano atual: ")
+leia(anoAtual)
+
+escreva("digite o ano de nascimento: ")
+leia(anoNascimento)
+
+idade <- anoAtual - anoNascimento
+
+se (idade >= 16) entao
+escreva("voce podera votar este ano.")
+senao
+escreva("voce nao podera votar este ano.")
+fimse
+
+
+Fimalgoritmo
