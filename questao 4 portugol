@@ -1,0 +1,24 @@
+Algoritmo "salario_vendedor"
+
+Var
+   salario_fixo, vendas, comissao, salario_total: real
+
+Inicio
+
+   Escreva("Digite o salário fixo: ")
+   Leia(salario_fixo)
+
+   Escreva("Digite o valor das vendas: ")
+   Leia(vendas)
+
+   Se (vendas <= 1500) então
+      comissao <- vendas * 0.03
+   Senão
+      comissao <- (1500 * 0.03) + ((vendas - 1500) * 0.05)
+   FimSe
+
+   salario_total <- salario_fixo + comissao
+
+   Escreva("Salário total: R$ ", salario_total)
+
+Fimalgoritmo
